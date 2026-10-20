@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "versions": [
+    {
+      "archive": "tar",
+      "binary": "codex",
+      "sha256": "89c4321eb9dc335b38341050d62189f814c03d030b74deff1fad9722e17f072c",
+      "version": "codex-cli 0.163.0"
+    },
+    {
+      "archive": "tar",
+      "binary": "codex-app-server",
+      "sha256": "9a6b46bd3bb5cf724f65fed5971039bb9904c9698ec4b3df9f3f8d3eed1ecfab",
+      "version": "codex-app-server 0.163.0"
+    },
+    {
+      "archive": "deb",
+      "binary": "codex",
+      "sha256": "89c4321eb9dc335b38341050d62189f814c03d030b74deff1fad9722e17f072c",
+      "version": "codex-cli 0.163.0"
+    },
+    {
+      "archive": "deb",
+      "binary": "codex-app-server",
+      "sha256": "9a6b46bd3bb5cf724f65fed5971039bb9904c9698ec4b3df9f3f8d3eed1ecfab",
+      "version": "codex-app-server 0.163.0"
+    }
+  ],
+  "checks": 40
+}

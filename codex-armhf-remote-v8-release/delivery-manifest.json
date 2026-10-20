@@ -1,0 +1,97 @@
+{
+  "version": "0.163.0+armhf2.remotev8",
+  "built_and_tested_in": "Codex Cloud",
+  "files": [
+    {
+      "name": "BUILD-MANIFEST.json",
+      "bytes": 8177,
+      "sha256": "274345fc95048a66e9bcc0f5674e954db9c81087cdc63365ba07e36db724062b",
+      "parts": [
+        "payload/BUILD-MANIFEST.json"
+      ]
+    },
+    {
+      "name": "INFORME-REMOTE-V8.md",
+      "bytes": 18929,
+      "sha256": "432c0f354a77363e2772c536d0be2a6496fadec43b4b20f3159af352e8a8cfc4",
+      "parts": [
+        "payload/INFORME-REMOTE-V8.md"
+      ]
+    },
+    {
+      "name": "PACKAGE-VERIFICATION.json",
+      "bytes": 825,
+      "sha256": "a9df2af17a73809d7b135de4600dbf7c57dc28e5263a9dc44f7302c51f868fb5",
+      "parts": [
+        "payload/PACKAGE-VERIFICATION.json"
+      ]
+    },
+    {
+      "name": "README.md",
+      "bytes": 9628,
+      "sha256": "8aa44ba0ebf0b76c236da22fe05c009cd633a4f2735659ec0bc04bce26732e3b",
+      "parts": [
+        "payload/README.md"
+      ]
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 904,
+      "sha256": "e091e48204f99b21e47dde16f3c265e13ab01dc3ce456c485e7d9365e02253f2",
+      "parts": [
+        "payload/SHA256SUMS"
+      ]
+    },
+    {
+      "name": "codex-armhf-source.patch",
+      "bytes": 633686,
+      "sha256": "f923bd26ce545e52728415272e1456b362a2d0a7dfe2c0e3954045963466369f",
+      "parts": [
+        "payload/codex-armhf-source.patch"
+      ]
+    },
+    {
+      "name": "codex-armhf.deb",
+      "bytes": 72535844,
+      "sha256": "f361a87af6035ea48db54233d94c4bca3260fba25b9d57562f39007605b9c47e",
+      "parts": [
+        "payload/codex-armhf.deb.part-000",
+        "payload/codex-armhf.deb.part-001"
+      ]
+    },
+    {
+      "name": "codex-armhf.tar.gz",
+      "bytes": 119462813,
+      "sha256": "a239fc78561cc8e1df23a9b74042fb25db0d710af077149aecfffa63acd92529",
+      "parts": [
+        "payload/codex-armhf.tar.gz.part-000",
+        "payload/codex-armhf.tar.gz.part-001",
+        "payload/codex-armhf.tar.gz.part-002"
+      ]
+    },
+    {
+      "name": "codex-remote-v8-linux-x86_64.tar.gz",
+      "bytes": 27571262,
+      "sha256": "8017b5c9255bc4bfbd715fb90a00f960050e90d7dd8d25f42fea919bdb7a6d13",
+      "parts": [
+        "payload/codex-remote-v8-linux-x86_64.tar.gz"
+      ]
+    },
+    {
+      "name": "codex-remote-v8-test-details.tar.gz",
+      "bytes": 27868,
+      "sha256": "232fd5b1741f49d1bfd144a0a212f7479462c779e89435e936a6774d286af35c",
+      "parts": [
+        "payload/codex-remote-v8-test-details.tar.gz"
+      ]
+    },
+    {
+      "name": "codex-remote-v8-windows-x86_64.zip",
+      "bytes": 28228159,
+      "sha256": "6bd885acb9c23827680c22b46aa915c76e50913f8c118c2b71fd0e9475050635",
+      "parts": [
+        "payload/codex-remote-v8-windows-x86_64.zip"
+      ]
+    }
+  ]
+}
