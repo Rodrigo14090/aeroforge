@@ -1,0 +1,80 @@
+{
+  "source": "Original verified Codex Cloud artifacts; no rebuild",
+  "artifacts": [
+    {
+      "name": "BUILD-MANIFEST.json",
+      "bytes": 2115,
+      "sha256": "64776e329dd974d296f8bf8ae153e3c635e5e7046166c69854b138f9b08e8fd4",
+      "segments": [
+        "payload/BUILD-MANIFEST.json"
+      ]
+    },
+    {
+      "name": "INFORME-ARMHF.md",
+      "bytes": 15125,
+      "sha256": "cc91b321adfae91bfe112a8310e0124561d4f6b7898c4173a5b88ef4b02d9f79",
+      "segments": [
+        "payload/INFORME-ARMHF.md"
+      ]
+    },
+    {
+      "name": "README.md",
+      "bytes": 4428,
+      "sha256": "9059fcecf1daf37d801f1194a17429ca9c877a4d64f1b74ee24b00dd7a975c24",
+      "segments": [
+        "payload/README.md"
+      ]
+    },
+    {
+      "name": "REPRODUCIR.md",
+      "bytes": 4372,
+      "sha256": "3cb02a06281d92f98f94cc31bd15a6b8fdfb7f86e69ade4d4a172f7c5fd3113d",
+      "segments": [
+        "payload/REPRODUCIR.md"
+      ]
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 682,
+      "sha256": "2b11bf593df3807bc58a49c6ca424158f94582b99e40fc25fb6fb8a4d3b2ceaa",
+      "segments": [
+        "payload/SHA256SUMS"
+      ]
+    },
+    {
+      "name": "codex-armhf-build-details.tar.gz",
+      "bytes": 434159,
+      "sha256": "751ce945e6b455609944e6fc9a86efea152bb3e552445be4aff82a1b99b73912",
+      "segments": [
+        "payload/codex-armhf-build-details.tar.gz"
+      ]
+    },
+    {
+      "name": "codex-armhf-source.patch",
+      "bytes": 633686,
+      "sha256": "f923bd26ce545e52728415272e1456b362a2d0a7dfe2c0e3954045963466369f",
+      "segments": [
+        "payload/codex-armhf-source.patch"
+      ]
+    },
+    {
+      "name": "codex-armhf.deb",
+      "bytes": 72527312,
+      "sha256": "61eac907ea4a06aa4a913c8a5c64a9cea20b91962305b797ea7efeb95818cb7a",
+      "segments": [
+        "payload/codex-armhf.deb.part-000",
+        "payload/codex-armhf.deb.part-001"
+      ]
+    },
+    {
+      "name": "codex-armhf.tar.gz",
+      "bytes": 119443299,
+      "sha256": "0e03b942ca3bb2b04f10a19eec1369f8fd54a3320cb966e8467486de8e1584f4",
+      "segments": [
+        "payload/codex-armhf.tar.gz.part-000",
+        "payload/codex-armhf.tar.gz.part-001",
+        "payload/codex-armhf.tar.gz.part-002"
+      ]
+    }
+  ]
+}
