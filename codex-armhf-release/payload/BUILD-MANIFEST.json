@@ -1,0 +1,59 @@
+{
+  "source_repository": "https://github.com/openai/codex",
+  "release": "rust-v0.163.0",
+  "base_commit": "83086188ae0614bd882818ff1aa23f3194962012",
+  "working_branch": "work/armhf-rust-v0.163.0",
+  "target": "armv7-unknown-linux-gnueabihf",
+  "elf_class": "ELF32",
+  "machine": "ARMv7",
+  "abi": "EABI5 hard-float",
+  "rust": "1.95.0",
+  "cargo_build_exit_code": 0,
+  "delivered_linker": "GNU BFD 2.44",
+  "generated_at_utc": "2026-10-20T15:51:32.319187+00:00",
+  "artifacts": {
+    "codex-armhf.tar.gz": {
+      "bytes": 119443299,
+      "sha256": "0e03b942ca3bb2b04f10a19eec1369f8fd54a3320cb966e8467486de8e1584f4"
+    },
+    "codex-armhf.deb": {
+      "bytes": 72527312,
+      "sha256": "61eac907ea4a06aa4a913c8a5c64a9cea20b91962305b797ea7efeb95818cb7a"
+    },
+    "codex-armhf-source.patch": {
+      "bytes": 633686,
+      "sha256": "f923bd26ce545e52728415272e1456b362a2d0a7dfe2c0e3954045963466369f"
+    }
+  },
+  "binaries": {
+    "codex-app-server": {
+      "bytes": 125921556,
+      "sha256": "9a6b46bd3bb5cf724f65fed5971039bb9904c9698ec4b3df9f3f8d3eed1ecfab"
+    },
+    "codex": {
+      "bytes": 166291588,
+      "sha256": "89c4321eb9dc335b38341050d62189f814c03d030b74deff1fad9722e17f072c"
+    }
+  },
+  "debian_depends": "libc6 (>= 2.39), libgcc-s1 (>= 4.3), libssl3t64 (>= 3.0.0), bubblewrap, ca-certificates",
+  "validation": {
+    "armhf_bpf_tests_passed": 14,
+    "host_json_syscall_map_tests_passed": 1,
+    "armv7_checks_passed": 21,
+    "packaged_copies_verified": 4,
+    "mock_cli_turn_completed": true,
+    "mock_metadata_model": "gpt-5.5",
+    "runtime_container_memory_bytes": 536870912,
+    "runtime_swap_bytes": 0,
+    "mock_turn_peak_rss_kib_including_qemu": 251456,
+    "real_model_api_tested": false,
+    "raspberry_hardware_tested": false,
+    "arm_kernel_sandbox_tested": false
+  },
+  "limitations": [
+    "Code Mode/V8 helper not included; code_mode_only models need compatible helper or remote host.",
+    "Voice helper not included.",
+    "System bubblewrap and suitable kernel namespace/seccomp support are required.",
+    "No claim of arbitrary workloads fitting into 512 MB."
+  ]
+}
