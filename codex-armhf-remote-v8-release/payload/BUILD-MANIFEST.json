@@ -1,0 +1,244 @@
+{
+  "version": "0.163.0+armhf2.remotev8",
+  "upstream_tag": "rust-v0.163.0",
+  "upstream_commit": "83086188ae0614bd882818ff1aa23f3194962012",
+  "new_rust_source_changes": false,
+  "armhf_binaries": {
+    "codex": {
+      "sha256": "89c4321eb9dc335b38341050d62189f814c03d030b74deff1fad9722e17f072c",
+      "bytes": 166291588,
+      "unchanged_from_armhf1": true
+    },
+    "codex-app-server": {
+      "sha256": "9a6b46bd3bb5cf724f65fed5971039bb9904c9698ec4b3df9f3f8d3eed1ecfab",
+      "bytes": 125921556,
+      "unchanged_from_armhf1": true
+    }
+  },
+  "host_sources": {
+    "linux": {
+      "sha256_archive": "314263128ba6592e7e807c265deeaf928a692b72dcbfeb5e0b20c9423b703529",
+      "binary_sha256": "8724d73ec190536233ab4628d24a071bfbcf27e5124f08fe35129f26fe48b916",
+      "target": "x86_64-unknown-linux-musl"
+    },
+    "windows": {
+      "sha256_archive": "bc82fa6d8f449c818292eac35bd7400c4f7dae08908fc9bc67bfbad8c4a3de68",
+      "target": "x86_64-pc-windows-msvc",
+      "native_execution_tested": false
+    }
+  },
+  "tests": {
+    "ssh-optimized": {
+      "passed": true,
+      "model_provider": "local deterministic mock, no real inference",
+      "v8_host": {
+        "pid": 8,
+        "elf": "x86-64",
+        "endpoint": "http://127.0.0.1:57471"
+      },
+      "ssh_multiplexed_appserver_and_reverse_forward": true,
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
+      "optimized": true,
+      "account": {
+        "account": null,
+        "requiresOpenaiAuth": false,
+        "workspaceRouting": null
+      },
+      "real_tool_calls": 8,
+      "app_server_exit": 0,
+      "armhf_appserver_peak_rss_kib": 261884,
+      "armhf_rss_measurement": "GNU time wait4 maximum RSS for App Server + QEMU/PRoot process tree, excludes external V8",
+      "x86_v8_host_peak_rss_kib": 25716,
+      "container_memory_peak_bytes": 230326272,
+      "memory_events_last": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "ssh-baseline": {
+      "passed": true,
+      "model_provider": "local deterministic mock, no real inference",
+      "v8_host": {
+        "pid": 9,
+        "elf": "x86-64",
+        "endpoint": "http://127.0.0.1:55747"
+      },
+      "ssh_multiplexed_appserver_and_reverse_forward": true,
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
+      "optimized": false,
+      "account": {
+        "account": null,
+        "requiresOpenaiAuth": false,
+        "workspaceRouting": null
+      },
+      "real_tool_calls": 8,
+      "app_server_exit": 0,
+      "armhf_appserver_peak_rss_kib": 273176,
+      "armhf_rss_measurement": "GNU time wait4 maximum RSS for App Server + QEMU/PRoot process tree, excludes external V8",
+      "x86_v8_host_peak_rss_kib": 25396,
+      "container_memory_peak_bytes": 243191808,
+      "memory_events_last": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "packaged-launcher": {
+      "passed": true,
+      "model_provider": "local deterministic mock, no real inference",
+      "v8_host": {
+        "pid": 8,
+        "elf": "x86-64",
+        "endpoint": "http://127.0.0.1:46933"
+      },
+      "ssh_multiplexed_appserver_and_reverse_forward": true,
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
+      "optimized": true,
+      "account": {
+        "account": null,
+        "requiresOpenaiAuth": false,
+        "workspaceRouting": null
+      },
+      "real_tool_calls": 8,
+      "external_host_failure_stops_tool_execution": false,
+      "app_server_exit": 0,
+      "armhf_appserver_peak_rss_kib": 269832,
+      "armhf_rss_measurement": "GNU time wait4 maximum RSS for App Server + QEMU/PRoot process tree, excludes external V8",
+      "x86_v8_host_peak_rss_kib": 25360,
+      "container_memory_peak_bytes": 290676736,
+      "memory_events_last": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "host-unavailable": {
+      "passed": true,
+      "model_provider": "local deterministic mock, no real inference",
+      "v8_host": {
+        "pid": 9,
+        "elf": "x86-64",
+        "endpoint": "http://127.0.0.1:46141"
+      },
+      "ssh_multiplexed_appserver_and_reverse_forward": true,
+      "models": [
+        "gpt-6.1-sol"
+      ],
+      "optimized": true,
+      "account": {
+        "account": null,
+        "requiresOpenaiAuth": false,
+        "workspaceRouting": null
+      },
+      "real_tool_calls": 0,
+      "external_host_failure_stops_tool_execution": true,
+      "app_server_exit": 0,
+      "armhf_appserver_peak_rss_kib": 247228,
+      "armhf_rss_measurement": "GNU time wait4 maximum RSS for App Server + QEMU/PRoot process tree, excludes external V8",
+      "x86_v8_host_peak_rss_kib": 10668,
+      "container_memory_peak_bytes": 195743744,
+      "memory_events_last": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "archive-tar": {
+      "passed": true,
+      "model_provider": "local deterministic mock, no real inference",
+      "v8_host": {
+        "pid": 8,
+        "elf": "x86-64",
+        "endpoint": "http://127.0.0.1:55323"
+      },
+      "ssh_multiplexed_appserver_and_reverse_forward": true,
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6-astra"
+      ],
+      "optimized": true,
+      "account": {
+        "account": null,
+        "requiresOpenaiAuth": false,
+        "workspaceRouting": null
+      },
+      "real_tool_calls": 4,
+      "external_host_failure_stops_tool_execution": false,
+      "app_server_exit": 0,
+      "armhf_appserver_peak_rss_kib": 268984,
+      "armhf_rss_measurement": "GNU time wait4 maximum RSS for App Server + QEMU/PRoot process tree, excludes external V8",
+      "x86_v8_host_peak_rss_kib": 25572,
+      "container_memory_peak_bytes": 255455232,
+      "memory_events_last": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "archive-deb": {
+      "passed": true,
+      "model_provider": "local deterministic mock, no real inference",
+      "v8_host": {
+        "pid": 8,
+        "elf": "x86-64",
+        "endpoint": "http://127.0.0.1:36157"
+      },
+      "ssh_multiplexed_appserver_and_reverse_forward": true,
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6-astra"
+      ],
+      "optimized": true,
+      "account": {
+        "account": null,
+        "requiresOpenaiAuth": false,
+        "workspaceRouting": null
+      },
+      "real_tool_calls": 4,
+      "external_host_failure_stops_tool_execution": false,
+      "app_server_exit": 0,
+      "armhf_appserver_peak_rss_kib": 265324,
+      "armhf_rss_measurement": "GNU time wait4 maximum RSS for App Server + QEMU/PRoot process tree, excludes external V8",
+      "x86_v8_host_peak_rss_kib": 25732,
+      "container_memory_peak_bytes": 230641664,
+      "memory_events_last": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    }
+  },
+  "real_chatgpt_plus_inference_tested": false,
+  "official_windows_gui_tested": false,
+  "archive_verification": {
+    "passed": true,
+    "versions": [
+      {
+        "archive": "tar",
+        "binary": "codex",
+        "sha256": "89c4321eb9dc335b38341050d62189f814c03d030b74deff1fad9722e17f072c",
+        "version": "codex-cli 0.163.0"
+      },
+      {
+        "archive": "tar",
+        "binary": "codex-app-server",
+        "sha256": "9a6b46bd3bb5cf724f65fed5971039bb9904c9698ec4b3df9f3f8d3eed1ecfab",
+        "version": "codex-app-server 0.163.0"
+      },
+      {
+        "archive": "deb",
+        "binary": "codex",
+        "sha256": "89c4321eb9dc335b38341050d62189f814c03d030b74deff1fad9722e17f072c",
+        "version": "codex-cli 0.163.0"
+      },
+      {
+        "archive": "deb",
+        "binary": "codex-app-server",
+        "sha256": "9a6b46bd3bb5cf724f65fed5971039bb9904c9698ec4b3df9f3f8d3eed1ecfab",
+        "version": "codex-app-server 0.163.0"
+      }
+    ],
+    "checks": 40
+  },
+  "powershell_validation": {
+    "syntax_parser": "PowerShell 7.4.6 Linux x86-64",
+    "syntax_passed": true,
+    "windows_native_runtime_tested": false,
+    "scripts": [
+      "Start-CodexArmhfCodeModeHost.ps1",
+      "Start-CodexArmhfTunnel.ps1"
+    ]
+  }
+}

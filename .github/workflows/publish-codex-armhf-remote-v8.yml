@@ -1,0 +1,50 @@
+name: Publish verified Codex ARMHF with external V8
+
+on:
+  push:
+    branches: [codex/armhf-remote-v8-delivery]
+    paths:
+      - codex-armhf-remote-v8-release/**
+      - .github/workflows/publish-codex-armhf-remote-v8.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: Restore verified Cloud artifacts
+        run: python3 codex-armhf-remote-v8-release/restore.py "$RUNNER_TEMP/codex-armhf-remote-v8"
+      - name: Save downloadable Actions artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: codex-armhf-0.163.0-remote-v8-experimental
+          path: ${{ runner.temp }}/codex-armhf-remote-v8/*
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish separate experimental release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: codex-armhf-v0.163.0-remote-v8-20261020
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/codex-armhf-remote-v8/"* --clobber
+          else
+            gh release create "$RELEASE_TAG" "$RUNNER_TEMP/codex-armhf-remote-v8/"* \
+              --target "$GITHUB_SHA" \
+              --title "Codex 0.163.0 ARMHF with external V8 — experimental" \
+              --notes-file codex-armhf-remote-v8-release/README.md \
+              --prerelease
+          fi
